@@ -1,3 +1,4 @@
+
 import { Component, signal } from '@angular/core';
 
 @Component({
@@ -9,3 +10,4 @@ import { Component, signal } from '@angular/core';
 export class App {
   protected readonly title = signal('primerangular');
 }
+ 
