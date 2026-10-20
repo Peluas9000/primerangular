@@ -1,0 +1,64 @@
+
+<h1>Deportes</h1>
+
+
+
+@for(n of numeros; track n; let i = $index){
+    <h6 [style.background-color]="n % 2 === 0 ? 'green' : 'red'">Numero: {{n}}</h6>
+}@empty{
+    <h6 style="color: red">Sin numeros</h6>
+}
+
+
+@for(n of numeros; track n; let i = $index){
+    <h6 [class.par]="n % 2 === 0" [class.impar]="n % 2 !== 0">Numero: {{n}}</h6>
+}@empty{
+    <h6 style="color: red">Sin numeros</h6>
+}
+
+
+
+<h2>Numero de deportes:{{sports.length}}</h2>
+@if(sports.length <4){
+    <h2 style="color: red">Tenemos menos de 4 deportes</h2>
+}@else{
+    <h2 style="color: green">Tenemos 4 o más deportes</h2>    
+}
+
+<ul>
+     @for (deporte of sports;track deporte; let i= $index) {
+        <li>{{deporte}}</li>
+     }@empty{
+        <h2 style="color: red">Sin deportes</h2>
+     }
+
+
+</ul>
+    
+
+
+
+
+
+
+
+<div *ngIf="sports.length < 5; else condicionales">
+  <p style = "color: red">Tenemos menos de 5 deportes </p>
+</div>
+
+<ng-template #condicionales>
+    <p style = "color: green">Tenemos mas de 5 deportes </p>
+</ng-template>
+
+<ul>
+    <li *ngFor="let sport of sports">
+        {{sport}}
+    </li>
+</ul>
+<ng-container *ngTemplateOutlet="pantallaCodigo"></ng-container>
+<ng-template #pantallaCodigo>
+    <h1 style="color: blue">
+        Esto es una plantilla HTML con mucho codigo 
+
+    </h1>
+</ng-template>

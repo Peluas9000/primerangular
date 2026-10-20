@@ -1,0 +1,11 @@
+.par {
+    background-color: #e0f805;
+    color: black;
+    font-weight: bold;
+}
+
+.impar{
+    background-color: #1ddf0b;
+    color: white;
+    font-weight: bold;
+}
