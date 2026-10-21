@@ -4,14 +4,16 @@ import { App } from './app';
 import { PrimerComponent } from '../components/primercomponent/primer.component';
 import { HooksComponent } from '../components/hookscomponent/hooks.component';
 import { DeportesComponent } from '../components/deportescomponent/deportes.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsBidingComponent } from '../components/formsbidingcomponent/forms.biding.component';
 
 
 @NgModule({
   declarations: [
-    App, PrimerComponent,HooksComponent,DeportesComponent
+    App, PrimerComponent,HooksComponent,DeportesComponent,FormsBidingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
