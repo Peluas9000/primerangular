@@ -1,0 +1,22 @@
+<h1>Forms Biding</h1>
+<h3>{{mensaje}}</h3>
+<form #formuser="ngForm" (ngSubmit)="recibirDatos()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" [(ngModel)]="user.name" name="cajanombre"#cajanombre="ngModel">
+  </div>
+  <div class="form-group">
+    <label for="email">Apellidos:</label>
+    <input type="text" [(ngModel)]="user.email" name="cajaapellidos" #cajaapellidos="ngModel"> 
+  </div>
+<br/>
+    <label for="email">Edad:</label>
+    <input type="number" [(ngModel)]="user.edad" name="cajaedad" #cajaedad="ngModel"> 
+<br/>
+    <button >Enviar datos </button>
+</form>
+
+<h2 style="color:blue">
+    Nombre:{{user.nombre}},Apellidos:{{user.apellidos}},Edad:{{user.edad}}
+</h2>
+

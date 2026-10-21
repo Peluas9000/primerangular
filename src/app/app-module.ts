@@ -5,12 +5,12 @@ import { PrimerComponent } from '../components/primercomponent/primer.component'
 import { HooksComponent } from '../components/hookscomponent/hooks.component';
 import { DeportesComponent } from '../components/deportescomponent/deportes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormsBidingComponent } from '../components/formsbidingcomponent/forms.biding.component';
+import { FormsBindingComponent } from '../components/formsbindingcomponent/forms.binding.component';
 
 
 @NgModule({
   declarations: [
-    App, PrimerComponent,HooksComponent,DeportesComponent,FormsBidingComponent
+    App, PrimerComponent,HooksComponent,DeportesComponent,FormsBindingComponent
   ],
   imports: [
     BrowserModule,FormsModule
