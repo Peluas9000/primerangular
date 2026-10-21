@@ -1,0 +1,21 @@
+<p>multiplicacionref works!</p>
+
+<h1>Multiplicación Reference Form</h1>
+<form #elegirNumero="ngForm"  >
+    <label for="numero">Numero Tabla Seleccionado:</label>
+    <input type="text" [(ngModel)]="numero" name="cajanumero" #cajanumero="ngModel"/>
+<button (click)="multiplicarNumeros()">Multiplicar</button>
+
+</form>
+
+<table border="1">
+    <tr>
+        <th>Tabla del {{numero}}</th>
+    </tr>
+    @for(num of numeros; track num; let i = index) {
+        <tr>
+            <td>{{numero}} x {{i+1}} = {{numero*(i+1)}}</td>
+        </tr>
+    }
+    
+</table>

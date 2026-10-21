@@ -1,0 +1,20 @@
+<p>multiplicacionelement works!</p>
+<h1>Multiplicación Element Reference Form</h1>
+<form #elegirNumero="ngForm" (ngSubmit)="multiplicarNumeros()">
+    <label>Numero Seleccionable Multplicar </label>
+    <input  type="text" #cajaNumero/>
+    <button type="submit">Multiplicar</button>
+
+</form>
+
+
+<h2 style="color:blue">
+    <table border="1">
+        <tr>
+            <th>Tabla del {{numero}}</th>
+        </tr>
+        <tr *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">
+            <td>{{numero}} x {{i}} = {{numero*i}}</td>
+        </tr>
+    </table>
+</h2>
